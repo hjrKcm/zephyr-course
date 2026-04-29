@@ -1,0 +1,6 @@
+board:
+  name: our_board
+  full_name: our_board Dongle
+  vendor: nordic
+  socs:
+  - name: nrf51822
