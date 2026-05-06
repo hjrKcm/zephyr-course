@@ -1,0 +1,4 @@
+if(CONFIG_CCS811)
+  zephyr_library()
+  zephyr_library_sources(board.c)
+endif()

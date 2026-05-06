@@ -1,0 +1,96 @@
+
+
+/dts-v1/;
+#include <nordic/nrf52832_qfaa.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+	model = "New_board";
+	compatible = "nordic,new_board";
+
+    chosen {
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,code-partition = &slot0_partition;
+	};
+    
+    aliases {
+		led0 = &led0;
+		led1 = &led1;
+		led2 = &led2;
+    }; 
+
+    	leds {
+		compatible = "gpio-leds";
+
+		/* Lightwell RGB */
+		led0: led_0 {
+			gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
+			label = "Red LED";
+		};
+
+		led1: led_1 {
+			gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
+			label = "Green LED";
+		};
+
+		led2: led_2 {
+			gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+			label = "Blue LED";
+		};
+	};
+
+}; 
+
+&gpiote {
+	status = "okay";
+};
+
+&gpio0 {
+	status = "okay";
+};
+
+&flash0 {
+	partitions {
+		ranges;
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		boot_partition: partition@0 {
+			compatible = "zephyr,mapped-partition";
+			label = "mcuboot";
+			reg = <0x00000000 0xc000>;
+		};
+
+		slot0_partition: partition@c000 {
+			compatible = "zephyr,mapped-partition";
+			label = "image-0";
+			reg = <0x0000c000 0x32000>;
+		};
+
+		slot1_partition: partition@3e000 {
+			compatible = "zephyr,mapped-partition";
+			label = "image-1";
+			reg = <0x0003e000 0x32000>;
+		};
+
+		scratch_partition: partition@70000 {
+			compatible = "zephyr,mapped-partition";
+			label = "image-scratch";
+			reg = <0x00070000 0xa000>;
+		};
+
+		/*
+		 * The flash starting at 0x0007a000 and ending at
+		 * 0x0007ffff (sectors 122-127) is reserved for use
+		 * by the application.
+		 * Storage partition will be used by FCB/LittleFS/NVS
+		 * if enabled.
+		 */
+		storage_partition: partition@7a000 {
+			compatible = "zephyr,mapped-partition";
+			label = "storage";
+			reg = <0x0007a000 0x00006000>;
+		};
+	};
+};

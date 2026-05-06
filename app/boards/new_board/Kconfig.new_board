@@ -1,0 +1,4 @@
+
+
+config BOARD_NEW_BOARD
+	select SOC_NRF52832_QFAA

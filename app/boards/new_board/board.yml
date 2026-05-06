@@ -1,0 +1,6 @@
+board:
+  name:   new_board
+  full_name: "new_board"
+  vendor: nordic
+  socs:
+  - name: nrf52832
