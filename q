@@ -1,0 +1,41 @@
+[33mcommit 56249c39a249a6be04ae004d579fec29d79dc915[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: hjrkcm <hjrkcim@gmail.com>
+Date:   Wed May 6 16:39:28 2026 +0200
+
+    board from scratch
+
+[33mcommit 98088a0572f2c1e1f448488b2065400e91cd31af[m[33m ([m[1;33mtag: [m[1;33ml5-task1[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: hjrkcm <hjrkcim@gmail.com>
+Date:   Wed Apr 29 13:49:25 2026 +0200
+
+    first_board
+
+[33mcommit 19bcfc280c8c269124ecd143ca4edef3ba520848[m[33m ([m[1;33mtag: [m[1;33ml4-task1[m[33m)[m
+Author: hjrkcm <hjrkcim@gmail.com>
+Date:   Wed Apr 22 19:42:38 2026 +0200
+
+    Divcetree
+
+[33mcommit fac2c0ab91cc50e2e1613cca0e6b438bd6c97ef2[m[33m ([m[1;33mtag: [m[1;33ml3-task1[m[33m)[m
+Author: hjrkcm <hjrkcim@gmail.com>
+Date:   Wed Apr 8 19:27:03 2026 +0200
+
+    App Configuration
+
+[33mcommit 774e7204332fd502abd984689bbb8a2bc420c3e3[m[33m ([m[1;33mtag: [m[1;33ml2-task1[m[33m)[m
+Author: hjrkcm <hjrkcim@gmail.com>
+Date:   Tue Mar 31 15:40:09 2026 +0200
+
+    LED Blink app
+
+[33mcommit c08963572858c89e4649d582ac0688d053b01525[m
+Author: Dawid Marszalkiewicz <dawid.m@iomico.com>
+Date:   Mon Mar 2 09:19:56 2026 +0100
+
+    build: downgrade to 4.2.0
+
+[33mcommit 8456c11bbdbcbdef9db967769763a3535c837a0c[m
+Author: Dawid Marszalkiewicz <dawid.m@iomico.com>
+Date:   Thu Feb 19 08:56:00 2026 +0100
+
+    feat: init sandbox repo with blinky
