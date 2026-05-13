@@ -13,9 +13,16 @@ static int our_driver_channel_get(struct device *dev, enum sensor_channel chan, 
     return 0;
 }
 
+static int our_driver_sample_fetch(struct device *dev, enum sensor_channel chan)
+{
+    LOG_INF("Getting sample for channel %d", chan);
+    return 0;
+}
+
 static DEVICE_API(sensor,our_driver_api)=
 {
     .channel_get = our_driver_channel_get,
+    .sample_fetch = our_driver_sample_fetch,
 };
 
 static int our_driver_init(struct device *dev)
